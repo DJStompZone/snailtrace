@@ -4,6 +4,8 @@ import os
 import httpx
 from PIL import Image
 
+from util import svg_to_functions as functionize
+
 def ensure_assets_dir(cwd=None):
     assets_path = os.path.join(cwd or os.getcwd(), "assets")
     if not os.path.isdir(assets_path):
@@ -56,6 +58,8 @@ def main():
     output_svg_path = os.path.join(ensure_assets_dir(), svg_filename)
 
     convert_to_svg(input_image_path, output_svg_path)
+    
+    print(functionize(output_svg_path, 4)) # debug
 
 
 if __name__ == "__main__":

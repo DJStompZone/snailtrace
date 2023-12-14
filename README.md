@@ -16,3 +16,10 @@ Install requirements with
 poetry install
 ```
 
+## Usage
+
+Run the script with 
+
+```
+poetry run trace
+```
