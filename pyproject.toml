@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "snailtrace"
+version = "0.1.0"
+description = "Convert raster images to vectors"
+authors = ["DJStomp <dj@deepai.org>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.25.2"
+Pillow = "^10.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+trace = "snailtrace.snailtrace:main"
